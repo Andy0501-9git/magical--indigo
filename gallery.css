@@ -1,0 +1,92 @@
+h1 {
+  font-family: DM Mono;
+  text-align: center;
+  color:rgb(3, 3, 250);
+  font-size: 40px;
+}
+
+.about {
+  background-image: url(/AboutUs/Images/GalleryBackground.svg);
+  padding-top: 2cm;
+  padding-bottom: 2cm;
+}
+
+.grid {
+  background-image: url(/AboutUs/Images/Event\ Planner.svg);
+  /* background-color: dimgrey; */
+  padding-top: 2cm;
+  padding-bottom: 2cm;
+  padding-left: 1cm;
+  padding-right: 1cm;
+}
+
+p {
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: dashed;
+  font-size: x-large;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  /* background-image: url(/Gallery/Images/GalleryBackground.svg); */
+}
+
+.gallery-item {
+  width: auto;
+  height: auto;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.full-screen-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.exit-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.full-screen-image {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.full-screen-overlay.show {
+  display: block;
+}
+
+.full-screen-image.show {
+  opacity: 1;
+}
